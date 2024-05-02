@@ -9,5 +9,5 @@ export const ScoreSheetRow = (props: {
   const label = scorers.reduce((output, item, index) => 
     `${output}${index > 0 ? ', ': ''}${item.name} (${item.minute}${item.status? ` ${item.status}` : ''})`, '') 
 
-  return <div>{label}</div>
+  return <div className="text-sm">{label}</div>
 };
