@@ -22,14 +22,15 @@ export default function RootLayout({
         <header><nav className="flex items-center justify-between p-6 lg:px-8" aria-label="Global">
           <div className="hidden lg:flex lg:gap-x-12">
             <Link href="/news">News</Link>
-            <Link href="/fixtures">Fixtures</Link>
+            <Link href="/fixtures">Matches</Link>
             <Link href="/teams">Teams</Link>
             <Link href="/tables">Tables</Link>
           </div>
           </nav></header>
         </div>
-        
+        <div className="container">
         {children}
+        </div>
       </body>
     </html>
   );
