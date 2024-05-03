@@ -1,3 +1,5 @@
+import { MatchDetail } from "@/app/components/matches/MatchDetail";
+
 /**
  * 
  * Display match detail according to upcoming/ongoing/completed 
@@ -6,5 +8,5 @@
  * if completed show score-board, player rating and match report
  */
 export default function MatchDetailPage() {
-  return <h2>Match Detail</h2>
+  return <MatchDetail />
 }

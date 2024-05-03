@@ -55,3 +55,13 @@ export type MatchPreview = {
   month?: string;
   year?: number;
 }
+
+export type CommentaryByMinute = {
+  minute?: string;
+  extraTime?: string;
+  icon?: string;
+  header?: string;
+  comment: string;
+  image?: string;
+  isGoal?: boolean;
+}
