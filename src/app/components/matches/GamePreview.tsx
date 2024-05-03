@@ -1,6 +1,7 @@
 import { MatchThumbnail } from "@/app/types";
 import Image from "next/image";
 import Link from "next/link";
+import { DateHelper } from "@/app/utils/dateFormatter";
 
 export const GamePreview = (props: {
   match?: MatchThumbnail
@@ -11,7 +12,7 @@ export const GamePreview = (props: {
     return <div></div>
   }
 
-  const formattedDate = match?.started_at.toISOString();
+  const formattedDate = DateHelper.toDateTimeWithDay(match?.started_at);
   const opponent = match?.isHomeGame ? match?.away.name : match?.home.name;
   const opponent_logo = match?.isHomeGame ? match?.away.logo : match?.home.logo;
   const game_letter = match?.isHomeGame? 'H' : 'A';

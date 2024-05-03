@@ -2,6 +2,7 @@ import { MatchThumbnail } from "@/app/types"
 import Link from "next/link";
 import { ScoreSheetRow } from "../scoresheets/ScoreSheetRow";
 import Image from "next/image";
+import { DateHelper } from "@/app/utils/dateFormatter";
 
 export const LastGamePreview = (props: {
   match?: MatchThumbnail
@@ -12,7 +13,7 @@ export const LastGamePreview = (props: {
     return <div />
   }
 
-  const formattedDate = match?.started_at.toISOString();
+  const formattedDate = DateHelper.toDateTimeWithDay(match?.started_at);
   const startedGame = Date.now() > match.started_at.getTime();
 
   return <div className="bg-slate-700 mb-2 p-4 text-white border-t-2 border-solid border-red content-end">
