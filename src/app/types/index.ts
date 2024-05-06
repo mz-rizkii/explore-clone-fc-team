@@ -58,10 +58,32 @@ export type MatchPreview = {
 
 export type CommentaryByMinute = {
   minute?: string;
-  extraTime?: string;
+  additionalMinute?: string;
   icon?: string;
   header?: string;
   comment: string;
   image?: string;
-  isGoal?: boolean;
+  tag?: string;
+}
+
+export const CommentaryTypes = {
+  goal: 'Goal',
+  penalty_goal: 'Goal (Pen)',
+  yellow_card: 'Yellow Card',
+  red_card: 'Red Card',
+  subs: 'Substitution',
+  fulltime: 'Full-time',
+  halftime: 'Half-time'
+}
+
+export type MatchStatsItem = {
+  home: number;
+  away: number;
+  label: string;
+}
+
+export type MatchStatsPreview = {
+  home: MatchTeam;
+  away: MatchTeam;
+  stats: MatchStatsItem[];
 }
