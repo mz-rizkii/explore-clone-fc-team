@@ -1,3 +1,5 @@
+'use client';
+
 import { MatchDetail } from "@/app/components/matches/MatchDetail";
 
 /**

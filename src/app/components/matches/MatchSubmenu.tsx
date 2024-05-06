@@ -2,15 +2,15 @@ import Link from "next/link"
 
 export const MatchSubmenu = () => {
   const menus = [
-    { label: 'news & video', url: '#'},
-    { label: 'commentary', url: '#' },
-    { label: 'teams', url: '#' },
-    { label: 'stats', url: '#' },
+    { label: 'News & Video', url: '#news'},
+    { label: 'Commentary', url: '#commentary' },
+    { label: 'Teams', url: '#teams' },
+    { label: 'Stats', url: '#stats' },
   ]
 
   return <div>
-    <ul>
-    {menus.map((menu) => <li>
+    <ul className="flex flex-row">
+    {menus.map((menu) => <li className="mx-4">
       <Link href={menu.url}>{menu.label}</Link>
     </li>)}
   </ul>
