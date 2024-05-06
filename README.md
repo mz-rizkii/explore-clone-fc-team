@@ -1,4 +1,27 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+This is clone footbal club website (fe-part) with additional admin feature to manage its contents. 
+It's built with [Next.js](https://nextjs.org/) & bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+
+## sitemap
+/news 
+  - default homepage contain list of news
+  /news/{slug} 
+  - contain detail of news
+/fixtures 
+  - list of upcoming matches, clicking any item will open match detail
+  /matches 
+  - list of matches (a match that has been played/completed), clicking any item will open match detail  
+  /matches/{slug} 
+   - it shows detail of match depend on its status (upcoming/ongoing/completed), with 4 sub-menus news & video, commentary, teams, stats  
+/teams
+  - shows list of team players, click any item will show player profile
+  /player-profile
+  - shows detailed player profile 
+  /teams/statistic
+  - contains statistic table of each team player 
+/table
+  - shows league table 
+/dashboard
+
 
 ## Getting Started
 
