@@ -5,11 +5,14 @@ import { CommentaryList } from "../commentary/CommentaryList"
 import { MatchStats } from "./MatchStats"
 
 export const MatchDetail = () => {
-  const [currentTab, setCurrentTab] = useState('');
+  const [currentTab, setCurrentTab] = useState('stats');
 
+  const onSelectSubmenu = (menu: string) => {
+    setCurrentTab(menu);
+  }
   return <Fragment>
     <LastGamePreview />
-    <MatchSubmenu />
+    <MatchSubmenu onSelectSubmenu={onSelectSubmenu} />
     {currentTab === 'commentary' && <CommentaryList />}
     {currentTab === 'stats' && <MatchStats />}
   </Fragment>

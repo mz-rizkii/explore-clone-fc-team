@@ -23,18 +23,19 @@ export const MatchStats = () => {
   }
 
   return <Fragment>
-    <ul>
-      <li>
-        <div>
-        <span>{matchStats.home.name}</span>
-        <Image src={matchStats.home.logo} alt={matchStats.home.name} width={48} height={48} />
+    <ul className="rounded-lg border-gray border-2 m-4">
+      <li className="grid grid-cols-3">
+        <div className="flex flex-row items-center justify-end text-lg">
+          <span className="align-middle font-bold px-4">{matchStats.home.name}</span>
+           <Image src={matchStats.home.logo} alt={matchStats.home.name} width={48} height={48} />
         </div>
-        <div>
-        <span>{matchStats.away.name}</span>
-        <Image src={matchStats.away.logo} alt={matchStats.away.name} width={48} height={48} />
+        <div />
+        <div className="flex flex-row items-center">
+          <Image src={matchStats.away.logo} alt={matchStats.away.name} width={48} height={48} />
+          <span className="align-middle font-bold text-lg px-4">{matchStats.away.name}</span>
         </div>
       </li>
-      {matchStats.stats.map((stat) => <li><MatchStatsRow stats={stat}/></li>)}
+      {matchStats.stats.map((stat, index) => <li><MatchStatsRow stats={stat} evenRow={index % 2 > 0} /></li>)}
     </ul>
   </Fragment>
 }
