@@ -1,12 +1,18 @@
-export type PlayerPosition = 'GK' | 'DF' | 'MF' | 'FW';
+export enum PlayerPositions {
+  gk = 'GK',
+  df = 'DF',
+  mf = 'MF',
+  fw = 'FW'
+}
 
 export type PlayerLineUp = {
-  position: PlayerPosition;
+  position: PlayerPositions;
   number: number;
   name: string;
   country: string;
   image: string;
-  subs_at: string;
+  subs_at?: string;
+  captain?: boolean
 }
 
 export type TeamSheets = {
