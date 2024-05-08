@@ -1,4 +1,4 @@
-import { TableView } from "../components/tables/TableView";
+import { TableView } from "../../components/tables/TableView";
 
 export default function TablePage() {
   const teams = [

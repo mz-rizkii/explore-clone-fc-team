@@ -1,5 +1,5 @@
-import { FixtureList } from "../components/fixtures/fixtureList";
-import { MatchMenu } from "../components/matches/MatchMenu";
+import { FixtureList } from "../../components/fixtures/fixtureList";
+import { MatchMenu } from "../../components/matches/MatchMenu";
 
 export default function FixturesPage() {
   const upcoming_matches = [

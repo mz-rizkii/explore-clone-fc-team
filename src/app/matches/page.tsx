@@ -1,5 +1,5 @@
-import { MatchList } from "../components/matches/MatchList"
-import { MatchMenu } from "../components/matches/MatchMenu"
+import { MatchList } from "../../components/matches/MatchList"
+import { MatchMenu } from "../../components/matches/MatchMenu"
 
 export default function MatchListPage () {
   const matches = [

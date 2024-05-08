@@ -1,4 +1,4 @@
-import { MatchDayCommentaryInput } from "@/app/components/dashboard/MatchDayCommentaryInput";
+import { MatchDayCommentaryInput } from "@/components/dashboard/MatchDayCommentaryInput";
 
 export default function MatchDayDashboardPage () {
   return <div>

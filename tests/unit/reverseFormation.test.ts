@@ -1,4 +1,4 @@
-import { reverseFormation } from '../../src/app/utils/formation';
+import { reverseFormation } from '../../src/utils/formation';
 
 it('show reversed formation for away team', () => {
   const input = [

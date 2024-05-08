@@ -1,6 +1,6 @@
 'use client';
 
-import { MatchDetail } from "@/app/components/matches/MatchDetail";
+import { MatchDetail } from "@/components/matches/MatchDetail";
 
 /**
  * 

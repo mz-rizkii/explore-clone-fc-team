@@ -1,4 +1,4 @@
-import StatisticView from "@/app/components/statistic/StatisticView";
+import StatisticView from "@/components/statistic/StatisticView";
 
 const setCompetitionState = (appearance: number, goal: number) => ({ total_appearance: appearance, total_goal: goal }); 
 
