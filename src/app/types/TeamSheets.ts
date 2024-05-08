@@ -1,3 +1,5 @@
+import { TeamInfo } from "./TeamInfo";
+
 export enum PlayerPositions {
   gk = 'GK',
   df = 'DF',
@@ -15,12 +17,13 @@ export type PlayerLineUp = {
   captain?: boolean
 }
 
-export type TeamSheets = {
+export type TeamFormationInfo = TeamInfo & {
+  formation: string;
+}
+
+export type TeamSheets = TeamFormationInfo & {
   starting: PlayerLineUp[];
   benches: PlayerLineUp[];
-  formation: string;
-  team_name: string;
-  team_logo: string;
 };
 
 export type LineupFormation = {
