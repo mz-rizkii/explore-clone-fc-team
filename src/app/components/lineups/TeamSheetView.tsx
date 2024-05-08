@@ -59,9 +59,16 @@ export const TeamSheetView = () => {
     team_logo: '/teams/bour.webp'
   };
 
+  const homeFormation = { lineups: [
+    ['22'], ['4', '2', '6', '18'], ['8', '5', '41'], ['7', '29', '19']
+  ], formation: '4-3-3'};
+  const awayFormation = { lineups: [
+    ['42'], ['15', '27', '25', '11'], ['10', '4', '14'], ['24', '9', '19']
+  ], formation: '4-3-3' };
+
   return <div className="grid grid-cols-3">
     <LineupViews team={home} isHomeTeam={true} />
-    <FormationView />
+    <FormationView home={homeFormation} away={awayFormation} />
     <LineupViews team={away} isHomeTeam={false} />
   </div>
 };

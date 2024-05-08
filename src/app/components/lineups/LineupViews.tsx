@@ -25,7 +25,7 @@ export const LineupViews = (props: {
       </ul>
     </div>
     <div>
-      <span>Substitions</span>
+      <span className="font-md font-bold p-4">Substitutions</span>
       <ul>
         {benches.map((player) => <li><LineUpRow player={player} homeTeam={isHomeTeam} /></li>)}
       </ul>
