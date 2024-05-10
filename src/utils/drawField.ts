@@ -1,6 +1,12 @@
 import { LineUpOnField } from "../types/LineupOnField";
 
-export const drawField = (formation: string[][], isHomeTeam: boolean): LineUpOnField[] => {
+export interface DrawFieldHelper {
+  drawField: (formation: string[][], isHomeTeam?: boolean) => LineUpOnField[],
+  maxRow: number,
+  fieldConfig: ({ total: number, indexes: number[] })[]
+}
+
+const drawField = (formation: string[][], isHomeTeam?: boolean): LineUpOnField[] => {
   const maxRow = 8;
 
   let index = 0;
@@ -30,3 +36,12 @@ export const drawField = (formation: string[][], isHomeTeam: boolean): LineUpOnF
 
   return result;
 };
+
+export const drawer: DrawFieldHelper = {
+  drawField,
+  maxRow: 8,
+  fieldConfig: [
+    { total: 4, indexes: [0, 2, 4, 6] },
+    { total: 5, indexes: [0, 1, 3, 5, 7] }
+  ]
+}  
