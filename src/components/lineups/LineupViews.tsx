@@ -18,13 +18,13 @@ export const LineupViews = (props: {
     <TeamFormationHeader team_logo={team_logo} team_name={team_name} formation={formation} isHomeTeam={isHomeTeam} />
     <div>
       <ul>
-        {starting.map((player) => <li><LineUpRow player={player} homeTeam={isHomeTeam} /></li>)}
+        {starting.map((player, index) => <li key={`starters-${index}`}><LineUpRow player={player} homeTeam={isHomeTeam} /></li>)}
       </ul>
     </div>
     <div>
       <span className="font-md font-bold p-4">Substitutions</span>
       <ul>
-        {benches.map((player) => <li><LineUpRow player={player} homeTeam={isHomeTeam} /></li>)}
+        {benches.map((player, index) => <li key={`bench-${index}`}><LineUpRow player={player} homeTeam={isHomeTeam} /></li>)}
       </ul>
     </div>
   </div>

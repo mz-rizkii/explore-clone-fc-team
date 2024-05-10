@@ -21,7 +21,7 @@ export const CommentaryList = () => {
   
   return <Fragment>
     <ul>
-      {comments.map((comment) => <li><CommentaryRow commentary={comment} /></li>)}
+      {comments.map((comment, index) => <li key={`commentary-${index}`}><CommentaryRow commentary={comment} /></li>)}
     </ul>
   </Fragment>
 };

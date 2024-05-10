@@ -21,15 +21,15 @@ export default function StatisticView(props: {
       
   <tr>
         <th></th>
-        {competitions.map((competitionName, index) => <th colSpan={2}>{competitionName}</th>) }
+        {competitions.map((competitionName, index) => <th colSpan={2} key={index}>{competitionName}</th>) }
       </tr>
       <tr>
         <th>Player Name</th>
-        {stats_labels.map((label, index) => <th>{label}</th>) }
+        {stats_labels.map((label, index) => <th key={index}>{label}</th>) }
       </tr>
     </thead>
     <tbody>
-      { playerStats.map((item) => <StatisticRow id={item.id} name={item.name} stats={item.stats}/>)}
+      { playerStats.map((item, index) => <StatisticRow key={`stats-row-${index}`} id={item.id} name={item.name} stats={item.stats}/>)}
       </tbody>
   </table>
  </div>

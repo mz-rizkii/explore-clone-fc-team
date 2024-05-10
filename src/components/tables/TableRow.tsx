@@ -1,6 +1,6 @@
 import { StandingTable } from "@/types";
 
-export const TableRow = (props: { team: StandingTable}) => {
+export const TableRow = (props: { team: StandingTable, index: number }) => {
   const { team: {
     position,
     team_name,
@@ -13,9 +13,9 @@ export const TableRow = (props: { team: StandingTable}) => {
     goal_allowed,
     goal_diff,
     points
-  }} = props;
+  }, index } = props;
 
-  return <tr>
+  return <tr key={index}>
     <td>{position}</td>
     <td>{team_logo}{team_name}</td>
     <td>{played}</td>

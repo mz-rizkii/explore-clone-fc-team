@@ -24,7 +24,7 @@ export const MatchStats = () => {
 
   return <Fragment>
     <ul className="rounded-lg border-gray border-2 m-4">
-      <li className="grid grid-cols-3">
+      <li className="grid grid-cols-3" key={'match-stats-top'}>
         <div className="flex flex-row items-center justify-end text-lg">
           <span className="align-middle font-bold px-4">{matchStats.home.name}</span>
            <Image src={matchStats.home.logo} alt={matchStats.home.name} width={48} height={48} />
@@ -35,7 +35,9 @@ export const MatchStats = () => {
           <span className="align-middle font-bold text-lg px-4">{matchStats.away.name}</span>
         </div>
       </li>
-      {matchStats.stats.map((stat, index) => <li><MatchStatsRow stats={stat} evenRow={index % 2 > 0} /></li>)}
+      {matchStats.stats.map((stat, index) => <li key={`match-stats-${index}`}>
+        <MatchStatsRow stats={stat} evenRow={index % 2 > 0} />
+      </li>)}
     </ul>
   </Fragment>
 }

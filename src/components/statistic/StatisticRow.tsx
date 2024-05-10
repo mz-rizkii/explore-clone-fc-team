@@ -5,8 +5,8 @@ export const StatisticRow = (props: PlayerStats) => {
   
   return <tr key={id}>
     <td>{name}</td>
-    {stats.map((item) => (
-      <><td>{item.total_appearance}</td><td>{item.total_goal}</td></>
+    {stats.map((item, index) => (
+      <><td key={`${index}-ta`}>{item.total_appearance}</td><td key={`${index}-tg`}>{item.total_goal}</td></>
     ))}
   </tr>
 }

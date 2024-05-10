@@ -25,7 +25,7 @@ export const TableView = (props: {
         </tr>
       </thead>
       <tbody>
-        {teams.map((team) => <TableRow team={team} />)}
+        {teams.map((team, index) => <TableRow team={team} index={index} key={`standing-${index}`} />)}
       </tbody>
     </table>
   </div>
